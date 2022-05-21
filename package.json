@@ -23,8 +23,6 @@
     "algoliasearch-helper": "^3.7.4",
     "clsx": "^1.1.1",
     "docusaurus-plugin-sass": "^0.2.2",
-    "graphiql": "^1.5.1",
-    "graphql": "^15.7.2",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
