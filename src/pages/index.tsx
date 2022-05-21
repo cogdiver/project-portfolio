@@ -25,14 +25,19 @@ function HomepageHeader() {
             to="/graphql/cloud/index">
             Hasura Cloud Docs
           </VersionedLink>
+          <VersionedLink
+            className="button button--primary button--lg"
+            to="/graphql/project/index">
+            Projects
+          </VersionedLink>
         </div>
-        <div className={styles.links}>
+        {/* <div className={styles.links}>
           <Link
             className="button button--secondary button--lg"
             to="/wiki/">
             Docs Wiki
           </Link>
-        </div>
+        </div> */}
         <img src={hasuras} alt="Hasuras Image" />
       </div>
     </header>

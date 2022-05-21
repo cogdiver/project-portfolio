@@ -50,23 +50,23 @@ const config = {
   ],
   plugins: [
     'docusaurus-plugin-sass',
-    [
-      'content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: 'wiki',
-        path: 'wiki',
-        routeBasePath: "wiki",
-        editUrl: ({ docPath }) => `https://github.com/hasura/graphql-engine/edit/master/docs/docs/${docPath}`,
-        editCurrentVersion: true,
-        docItemComponent: require.resolve('./src/components/CustomDocItem/CustomDocItemWiki.tsx'),
-        // disableVersioning: true,
-        breadcrumbs: false,
-        sidebarPath: require.resolve('./sidebarsWiki.js'),
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-      }),
-    ],
+    // [
+    //   'content-docs',
+    //   /** @type {import('@docusaurus/plugin-content-docs').Options} */
+    //   ({
+    //     id: 'wiki',
+    //     path: 'wiki',
+    //     routeBasePath: "wiki",
+    //     editUrl: ({ docPath }) => `https://github.com/hasura/graphql-engine/edit/master/docs/docs/${docPath}`,
+    //     editCurrentVersion: true,
+    //     docItemComponent: require.resolve('./src/components/CustomDocItem/CustomDocItemWiki.tsx'),
+    //     // disableVersioning: true,
+    //     breadcrumbs: false,
+    //     sidebarPath: require.resolve('./sidebarsWiki.js'),
+    //     showLastUpdateAuthor: true,
+    //     showLastUpdateTime: true,
+    //   }),
+    // ],
     [
       path.resolve(__dirname, './src/plugins/docusaurus-plugin-segment-analytics'),
       {
@@ -143,7 +143,7 @@ const config = {
         items: [
           {
             type: 'dropdown',
-            label: 'Docs',
+            label: 'Projects',
             position: 'left',
             items: [
               {
@@ -155,6 +155,11 @@ const config = {
                 type: 'docSidebar',
                 sidebarId: 'cloudDocsSidebar',
                 label: 'Hasura Cloud',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'projectDocsSidebar',
+                label: 'Projects',
               },
             ],
           },
@@ -173,6 +178,12 @@ const config = {
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
+          },
+          {
+            href: 'https://gitlab.com/valentina.arenas',
+            position: 'right',
+            className: 'header-gitlab-link',
+            'aria-label': 'Gitlab repository',
           },
           {
             href: 'https://www.linkedin.com/in/valentina-arenas-lozano-3a12b012b/',
